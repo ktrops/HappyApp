@@ -1,0 +1,4 @@
+<% form_for(@joke) do |f| %>
+<%= button_to 'jokes', joke_path(1), method: "get" %>
+<%= button_too 'pearls of wisdom', quote_path(1), method: "post" %>
+<% end %>
