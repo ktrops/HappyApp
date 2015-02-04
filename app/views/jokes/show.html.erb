@@ -4,4 +4,6 @@
   <%= @joke.setup %> <%= @joke.punchline %>
 </p>
 
+<%= render partial: 'shared/buttons', :locals => { :next_joke => @next_joke, :next_quote => @next_quote} %>
+
 

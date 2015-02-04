@@ -10,6 +10,9 @@ class QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+    @quotes = Quote.first
+    @next_quote = Quote.all.sample
+    @next_joke = Joke.all.sample
   end
 
   # GET /quotes/new

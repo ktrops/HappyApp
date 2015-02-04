@@ -10,6 +10,9 @@ class JokesController < ApplicationController
   # GET /jokes/1
   # GET /jokes/1.json
   def show
+    @jokes = Joke.first
+    @next_joke = Joke.all.sample
+    @next_quote = Quote.all.sample
   end
 
   # GET /jokes/new
@@ -19,6 +22,12 @@ class JokesController < ApplicationController
 
   # GET /jokes/1/edit
   def edit
+  end
+  
+  def welcome
+    @joke = Joke.first
+    @next_joke = Joke.all.sample
+    @next_quote = Quote.all.sample
   end
 
   # POST /jokes
